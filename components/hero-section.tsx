@@ -44,11 +44,14 @@ export function HeroSection() {
             <div id="hero-cta-buttons" className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 id="hero-learn-more-btn"
+                asChild
                 size="lg"
                 className="bg-blue-600/80 hover:bg-blue-700/80 backdrop-blur-sm px-8 py-4 text-lg text-white border border-white/20"
               >
-                <Link href="/products"></Link>{t("hero.cta.primary")}</Link>
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Link href="/products">
+                  {t("hero.cta.primary")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button
                 id="hero-contact-btn"
