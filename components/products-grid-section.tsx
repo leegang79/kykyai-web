@@ -102,7 +102,7 @@ export function ProductsGridSection() {
                 {/* Tengwangge Media Coverage Section */}
                 <div
                   id="tengwangge-media-coverage"
-                  className="mt-12 bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-8 w-full"
+                  className="p-8 w-full"
                 >
                   <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                     {t("products.tengwangge.media_title")}
@@ -401,11 +401,11 @@ export function ProductsGridSection() {
                     <Play className="w-4 h-4 mr-2" />
                     {t("products.lushi.demo_btn")}
                   </Button>
-
-                  {/* Lushi Media Coverage Section */}
+                </CardHeader>
+                {/* Lushi Media Coverage Section */}
                   <div
                     id="lushi-media-coverage"
-                    className="mt-12 bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-8"
+                    className="p-8 w-full"
                   >
                     <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                       {t("products.lushi.media_title")}
@@ -414,7 +414,7 @@ export function ProductsGridSection() {
                       <div className="flex animate-marquee space-x-8 whitespace-nowrap">
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media1.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/0.png"
                             alt={t("products.lushi.media.legal_daily.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -429,7 +429,7 @@ export function ProductsGridSection() {
                         </div>
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media2.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/1.png"
                             alt={t("products.lushi.media.china_lawyer.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -444,7 +444,7 @@ export function ProductsGridSection() {
                         </div>
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media3.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/2.png"
                             alt={t("products.lushi.media.jiangxi_legal.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -459,7 +459,7 @@ export function ProductsGridSection() {
                         </div>
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media4.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/3.png"
                             alt={t("products.lushi.media.shenzhen_daily.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -474,7 +474,7 @@ export function ProductsGridSection() {
                         </div>
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media5.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/4.png"
                             alt={t("products.lushi.media.nanchang_daily.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -490,7 +490,7 @@ export function ProductsGridSection() {
                         {/* Duplicate items for seamless loop */}
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media1.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/5.png"
                             alt={t("products.lushi.media.legal_daily.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -505,7 +505,7 @@ export function ProductsGridSection() {
                         </div>
                         <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
                           <img
-                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/lushi_media2.jpg"
+                            src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/twg_media_list/6.png"
                             alt={t("products.lushi.media.china_lawyer.name")}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
@@ -521,7 +521,6 @@ export function ProductsGridSection() {
                       </div>
                     </div>
                   </div>
-                </CardHeader>
               </Card>
             </div>
           </div>

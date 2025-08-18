@@ -62,8 +62,8 @@ export function PartnersShowcaseSection() {
                   <div className="w-full h-48 bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mt-[-24px]">
                     <div className="text-center text-white">
                       <Cloud className="w-16 h-16 mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold">云计算服务商</h3>
-                      <p className="text-blue-100 mt-2">基础设施合作</p>
+                      <h3 className="text-2xl font-bold">{t("partners.cloud_service_provider")}</h3>
+                      <p className="text-blue-100 mt-2">{t("partners.infrastructure_cooperation")}</p>
                     </div>
                   </div>
                   <div className="absolute top-4 left-4   mt-[-24px]">
@@ -102,8 +102,8 @@ export function PartnersShowcaseSection() {
                   <div className="w-full h-48 bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mt-[-24px]">
                     <div className="text-center text-white">
                       <Database className="w-16 h-16 mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold">数据服务商</h3>
-                      <p className="text-purple-100 mt-2">数据资源合作</p>
+                      <h3 className="text-2xl font-bold">{t("partners.data_service_provider")}</h3>
+                      <p className="text-purple-100 mt-2">{t("partners.data_resource_cooperation")}</p>
                     </div>
                   </div>
                   <div className="absolute top-4 left-4  mt-[-24px]">

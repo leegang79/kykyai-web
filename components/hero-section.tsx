@@ -9,7 +9,7 @@ export function HeroSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="hero-section" className="relative h-[calc(100vh-4rem)] w-full">
+    <section id="hero-section" className="relative h-[calc(100vh-4rem)] w-full bg-slate-900">
       <iframe
         className="video-background absolute inset-0 w-full h-full border-0 z-0"
         src="https://human.kykyai.com:8016/?autoplay=1"
@@ -51,6 +51,7 @@ export function HeroSection() {
               </Button>
               <Button
                 id="hero-demo-btn"
+                href="/technology"
                 variant="outline"
                 size="lg"
                 className="px-8 py-4 text-lg bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20"
