@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import Link from "next/link"
 
 export function CTASection() {
   const { t } = useLanguage()
@@ -19,11 +20,12 @@ export function CTASection() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-white/10 backdrop-blur-sm"
             >
-              {t("cta.contact_sales")}
+              <Link href="/contact">{t("cta.contact_sales")}</Link>
             </Button>
           </div>
         </div>

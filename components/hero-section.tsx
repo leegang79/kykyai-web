@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import Link from "next/link"
 
 export function HeroSection() {
   const { t } = useLanguage()
@@ -50,13 +51,13 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
-                id="hero-demo-btn"
-                href="/technology"
+                id="hero-contact-btn"
+                asChild
                 variant="outline"
                 size="lg"
                 className="px-8 py-4 text-lg bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20"
               >
-                {t("hero.cta.secondary")}
+                <Link href="/contact">{t("hero.cta.secondary")}</Link>
               </Button>
             </div>
           </div>
