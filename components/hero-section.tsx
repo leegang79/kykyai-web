@@ -47,7 +47,7 @@ export function HeroSection() {
                 size="lg"
                 className="bg-blue-600/80 hover:bg-blue-700/80 backdrop-blur-sm px-8 py-4 text-lg text-white border border-white/20"
               >
-                {t("hero.cta.primary")}
+                <Link href="/products"></Link>{t("hero.cta.primary")}</Link>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
