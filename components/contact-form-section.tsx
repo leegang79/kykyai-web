@@ -47,7 +47,7 @@ export function ContactFormSection() {
     console.log("[v0] Form submission started", formData.name)
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://www.kykyai.com/contactus", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

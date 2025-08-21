@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { PageLayout } from "@/components/page-layout"
 import { HeroSection } from "@/components/hero-section"
 import { HeroVideoSection } from "@/components/hero-video-section"
@@ -6,11 +7,13 @@ import { CTASection } from "@/components/cta-section"
 
 export default function HomePage() {
   return (
-    <PageLayout>
-      <HeroSection />
-      <HeroVideoSection />
-      <CompanyIntroSection />
-      <CTASection />
-    </PageLayout>
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageLayout>
+        <HeroSection />
+        <HeroVideoSection />
+        <CompanyIntroSection />
+        <CTASection />
+      </PageLayout>
+    </Suspense>
   )
 }
