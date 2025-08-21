@@ -28,3 +28,14 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## 开发模型
+npx run dev
+http://localhost:3000/{basePath}
+
+## 发布
+npm run build 
+check folder /out
+
+npm run start
+

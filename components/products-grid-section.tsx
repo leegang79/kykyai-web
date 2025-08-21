@@ -90,122 +90,14 @@ export function ProductsGridSection() {
                       {t("products.tengwangge.interaction_badge")}
                     </Badge>
                   </div>
-                  <Button
+                  {/* <Button
                     id="tengwangge-learn-btn"
                     className="w-full bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 text-white"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     {t("products.tengwangge.learn_btn")}
-                  </Button>
+                  </Button> */}
                 </CardHeader>
-
-                {/* Tengwangge Media Coverage Section */}
-                <div
-                  id="tengwangge-media-coverage"
-                  className="p-8 w-full"
-                >
-                  <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">
-                    {t("products.tengwangge.media_title")}
-                  </h3>
-                  <div className="relative overflow-hidden w-full">
-                    <div className="flex animate-marquee space-x-8 whitespace-nowrap w-max">
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/cctv_logo.png"
-                          alt={t("products.tengwangge.media.cctv.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.cctv.name")}</h4>
-                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.cctv.description")}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/peoples_daily_logo.png"
-                          alt={t("products.tengwangge.media.peoples_daily.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">
-                            {t("products.tengwangge.media.peoples_daily.name")}
-                          </h4>
-                          <p className="text-sm text-slate-600">
-                            {t("products.tengwangge.media.peoples_daily.description")}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/xinhua_logo.png"
-                          alt={t("products.tengwangge.media.xinhua.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.xinhua.name")}</h4>
-                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.xinhua.description")}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/jiangxi_daily_logo.png"
-                          alt={t("products.tengwangge.media.jiangxi_daily.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">
-                            {t("products.tengwangge.media.jiangxi_daily.name")}
-                          </h4>
-                          <p className="text-sm text-slate-600">
-                            {t("products.tengwangge.media.jiangxi_daily.description")}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/tech_daily_logo.png"
-                          alt={t("products.tengwangge.media.tech_daily.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">
-                            {t("products.tengwangge.media.tech_daily.name")}
-                          </h4>
-                          <p className="text-sm text-slate-600">
-                            {t("products.tengwangge.media.tech_daily.description")}
-                          </p>
-                        </div>
-                      </div>
-                      {/* Duplicate items for seamless loop */}
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/cctv_logo.png"
-                          alt={t("products.tengwangge.media.cctv.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.cctv.name")}</h4>
-                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.cctv.description")}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
-                        <img
-                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/peoples_daily_logo.png"
-                          alt={t("products.tengwangge.media.peoples_daily.name")}
-                          className="w-16 h-16 object-contain rounded-lg"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-slate-800">
-                            {t("products.tengwangge.media.peoples_daily.name")}
-                          </h4>
-                          <p className="text-sm text-slate-600">
-                            {t("products.tengwangge.media.peoples_daily.description")}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </Card>
 
               <Card
@@ -352,6 +244,113 @@ export function ProductsGridSection() {
                     {t("products.pavilion.experience_btn")}
                   </Button>
                 </CardHeader>
+                {/* Tengwangge Media Coverage Section */}
+                <div
+                  id="tengwangge-media-coverage"
+                  className="p-8 w-full"
+                >
+                  <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">
+                    {t("products.tengwangge.media_title")}
+                  </h3>
+                  <div className="relative overflow-hidden w-full">
+                    <div className="flex animate-marquee space-x-8 whitespace-nowrap w-max">
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/cctv_logo.png"
+                          alt={t("products.tengwangge.media.cctv.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.cctv.name")}</h4>
+                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.cctv.description")}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/peoples_daily_logo.png"
+                          alt={t("products.tengwangge.media.peoples_daily.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">
+                            {t("products.tengwangge.media.peoples_daily.name")}
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            {t("products.tengwangge.media.peoples_daily.description")}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/xinhua_logo.png"
+                          alt={t("products.tengwangge.media.xinhua.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.xinhua.name")}</h4>
+                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.xinhua.description")}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/jiangxi_daily_logo.png"
+                          alt={t("products.tengwangge.media.jiangxi_daily.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">
+                            {t("products.tengwangge.media.jiangxi_daily.name")}
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            {t("products.tengwangge.media.jiangxi_daily.description")}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/tech_daily_logo.png"
+                          alt={t("products.tengwangge.media.tech_daily.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">
+                            {t("products.tengwangge.media.tech_daily.name")}
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            {t("products.tengwangge.media.tech_daily.description")}
+                          </p>
+                        </div>
+                      </div>
+                      {/* Duplicate items for seamless loop */}
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/cctv_logo.png"
+                          alt={t("products.tengwangge.media.cctv.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">{t("products.tengwangge.media.cctv.name")}</h4>
+                          <p className="text-sm text-slate-600">{t("products.tengwangge.media.cctv.description")}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-4 bg-white rounded-lg p-4 shadow-md min-w-max">
+                        <img
+                          src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/peoples_daily_logo.png"
+                          alt={t("products.tengwangge.media.peoples_daily.name")}
+                          className="w-16 h-16 object-contain rounded-lg"
+                        />
+                        <div>
+                          <h4 className="font-semibold text-slate-800">
+                            {t("products.tengwangge.media.peoples_daily.name")}
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            {t("products.tengwangge.media.peoples_daily.description")}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Card>
 
               <Card
