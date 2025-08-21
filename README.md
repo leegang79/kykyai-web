@@ -38,4 +38,3 @@ npm run build
 check folder /out
 
 npm run start
-

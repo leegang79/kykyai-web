@@ -8,7 +8,18 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, Clock, Send, Building2, Users, MessageSquare, Globe } from "lucide-react"
+import {
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  Building2,
+  Users,
+  MessageSquare,
+  Globe,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react"
 import { useState } from "react"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -23,10 +34,46 @@ export function ContactFormSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setIsLoading(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
+
+    try {
+      const response = await fetch("https://www.kykyai.com/contactus", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        // Reset form on success
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "An unknown error occurred")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,6 +96,20 @@ export function ContactFormSection() {
               </div>
               <Card className="border-0 shadow-2xl bg-slate-200">
                 <div className="p-8 pt-0">
+                  {submitStatus === "success" && (
+                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
+                      <span className="text-green-800">消息发送成功！我们会尽快回复您。</span>
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+                      <AlertCircle className="w-5 h-5 text-red-600 mr-2" />
+                      <span className="text-red-800">发送失败，请稍后重试。{errorMessage && ` (${errorMessage})`}</span>
+                    </div>
+                  )}
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="text-gray-700">
@@ -148,10 +209,11 @@ export function ContactFormSection() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-lg text-white"
+                      disabled={isLoading}
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Send className="w-5 h-5 mr-2" />
-                      {t("contact.form.submit")}
+                      <Send className={`w-5 h-5 mr-2 ${isLoading ? "animate-spin" : ""}`} />
+                      {isLoading ? "发送中..." : t("contact.form.submit")}
                     </Button>
                   </form>
                 </div>

@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
+import { useRouter, useSearchParams, usePathname } from "next/navigation"
 
 type Language = "zh" | "en"
 
@@ -35,11 +36,13 @@ const translations = {
 
     // Company Introduction
     "company.title": "公司介绍",
-    "company.description": "快语科技股份有限公司是一个初创人工智能软件公司，于2021年4月在深圳注册成立，并在上海、杭州和南昌设立了分支机构。公司由前上市公司高管、著名大学教授和前世界500强公司IT总监合伙创立。",
+    "company.description":
+      "快语科技股份有限公司是一个初创人工智能软件公司，于2021年4月在深圳注册成立，并在上海、杭州和南昌设立了分支机构。公司由前上市公司高管、著名大学教授和前世界500强公司IT总监合伙创立。",
     "company.vision.title": "愿景",
     "company.vision.description": "通过智能化内容生成，虚拟人实时交互，使工作和学习更轻松愉快！",
     "company.strategy.title": "战略",
-    "company.strategy.description": "采用全球人工智能领先技术，创建数字内容智能生成平台， 通过数字虚拟人形式进行有效交互，同行业龙头企业合作，对优秀内容进行智能化生成 通过数字虚拟人，服务广泛的行业客户。",
+    "company.strategy.description":
+      "采用全球人工智能领先技术，创建数字内容智能生成平台， 通过数字虚拟人形式进行有效交互，同行业龙头企业合作，对优秀内容进行智能化生成 通过数字虚拟人，服务广泛的行业客户。",
     "company.datasets.title": "专业数据集构建",
     "company.datasets.museum": "文博场馆数据集",
     "company.datasets.artifacts": "文物知识数据集",
@@ -439,11 +442,14 @@ const translations = {
 
     // Company Introduction
     "company.title": "About Us",
-    "company.description": "KuaiYu Tech is a startup AI software company registered in Shenzhen in April 2021, with branches in Shanghai, Hangzhou and Nanchang. The company was co-founded by a former executive of a listed company, a professor at a prestigious university, and a former IT director of a Fortune 500 company.",
+    "company.description":
+      "KuaiYu Tech is a startup AI software company registered in Shenzhen in April 2021, with branches in Shanghai, Hangzhou and Nanchang. The company was co-founded by a former executive of a listed company, a professor at a prestigious university, and a former IT director of a Fortune 500 company.",
     "company.vision.title": "Vision",
-    "company.vision.description": "Through intelligent content generation and real-time interaction with virtual humans, work and learning become easier and more enjoyable!",
+    "company.vision.description":
+      "Through intelligent content generation and real-time interaction with virtual humans, work and learning become easier and more enjoyable!",
     "company.strategy.title": "Strategy",
-    "company.strategy.description": "We use the world's leading artificial intelligence technology to create a digital content intelligent generation platform, effectively interact through digital virtual humans, cooperate with leading companies in the same industry, and intelligently generate excellent content. Through digital virtual humans, we serve a wide range of industry customers.",
+    "company.strategy.description":
+      "We use the world's leading artificial intelligence technology to create a digital content intelligent generation platform, effectively interact through digital virtual humans, cooperate with leading companies in the same industry, and intelligently generate excellent content. Through digital virtual humans, we serve a wide range of industry customers.",
     "company.datasets.title": "Professional Dataset Construction",
     "company.datasets.museum": "Museum Venue Dataset",
     "company.datasets.artifacts": "Cultural Artifacts Dataset",
@@ -651,7 +657,7 @@ const translations = {
     "partners.data_service_provider": "Data Service Provider",
     "partners.data_resource_cooperation": "Data Resource Partnership",
 
-// Footer
+    // Footer
     "footer.company": "Shenzhen KykyAI Technology Co., Ltd.",
     "footer.description":
       "Providing innovative AI solutions through intelligent content generation and real-time virtual human interaction.",
@@ -852,16 +858,31 @@ const translations = {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("zh")
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("kykyai-language") as Language
-    if (savedLanguage && (savedLanguage === "zh" || savedLanguage === "en")) {
-      setLanguage(savedLanguage)
+    const urlLang = searchParams.get("lang") as Language
+    if (urlLang && (urlLang === "zh" || urlLang === "en")) {
+      setLanguage(urlLang)
+    } else {
+      const savedLanguage = localStorage.getItem("kykyai-language") as Language
+      if (savedLanguage && (savedLanguage === "zh" || savedLanguage === "en")) {
+        setLanguage(savedLanguage)
+      }
     }
-  }, [])
+  }, [searchParams])
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang)
+    const current = new URLSearchParams(Array.from(searchParams.entries()))
+    current.set("lang", lang)
+    const search = current.toString()
+    const query = search ? `?${search}` : ""
+
+    router.push(`${pathname}${query}`)
+
     localStorage.setItem("kykyai-language", lang)
   }
 
