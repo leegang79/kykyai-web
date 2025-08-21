@@ -310,6 +310,9 @@ const translations = {
     "contact.form.message_placeholder": "请详细描述您的需求或问题...",
     "contact.form.submit": "发送消息",
     "contact.form.required": "*",
+    "contact.form.sending": "发送中...",
+    "contact.form.success": "发送成功",
+    "contact.form.error": "发送失败",
 
     // Contact Information
     "contact.info.title": "联系信息",
@@ -732,8 +735,8 @@ const translations = {
     "contact.form.submit": "Send Message",
     "contact.form.required": "*",
     "contact.form.sending": "Sending...",
-    "contact.form.success": "Message sent successfully! We'll get back to you soon.",
-    "contact.form.error": "Failed to send message. Please try again.",
+    "contact.form.success": "Message sent successfully!",
+    "contact.form.error": "Failed to send message",
 
     // Contact Information
     "contact.info.title": "Contact Information",

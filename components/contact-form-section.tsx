@@ -115,7 +115,7 @@ export function ContactFormSection() {
                   {submitStatus === "success" && (
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                      <span className="text-green-800 font-medium">发送成功</span>
+                      <span className="text-green-800 font-medium">{t("contact.form.success")}</span>
                     </div>
                   )}
 
@@ -123,7 +123,7 @@ export function ContactFormSection() {
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                       <AlertCircle className="w-5 h-5 text-red-600 mr-2" />
                       <div className="text-red-800">
-                        <div className="font-medium">发送失败</div>
+                        <div className="font-medium">{t("contact.form.error")}</div>
                         {errorMessage && <div className="text-sm mt-1">原因：{errorMessage}</div>}
                       </div>
                     </div>
@@ -232,7 +232,7 @@ export function ContactFormSection() {
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-lg text-white disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Send className={`w-5 h-5 mr-2 ${isLoading ? "animate-spin" : ""}`} />
-                      {isLoading ? "发送中..." : t("contact.form.submit")}
+                      {isLoading ? t("contact.form.sending") : t("contact.form.submit")}
                     </Button>
                   </form>
                 </div>
