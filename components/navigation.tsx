@@ -64,19 +64,20 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div id="desktop-nav-menu" className="hidden md:flex items-center space-x-8">
+          <div id="desktop-nav-menu" className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === item.href
-                    ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-gray-900 hover:text-blue-600"
+                className={`px-3 py-2 text-sm font-medium whitespace-nowrap transition-all duration-200 relative ${
+                  pathname === item.href ? "text-blue-600 font-semibold" : "text-gray-900 hover:text-blue-600"
                 }`}
                 onClick={handleLinkClick}
               >
                 {item.name}
+                {pathname === item.href && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></span>
+                )}
               </Link>
             ))}
 
@@ -84,7 +85,7 @@ export function Navigation() {
               <Globe className="h-4 w-4 text-gray-600" />
               <button
                 onClick={() => setLanguage("zh")}
-                className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+                className={`px-2 py-1 text-sm font-medium rounded transition-colors whitespace-nowrap ${
                   language === "zh" ? "bg-blue-100 text-blue-600" : "text-gray-600 hover:text-blue-600"
                 }`}
               >
@@ -93,7 +94,7 @@ export function Navigation() {
               <span className="text-gray-400">|</span>
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+                className={`px-2 py-1 text-sm font-medium rounded transition-colors whitespace-nowrap ${
                   language === "en" ? "bg-blue-100 text-blue-600" : "text-gray-600 hover:text-blue-600"
                 }`}
               >
@@ -132,7 +133,7 @@ export function Navigation() {
                   href={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors ${
                     pathname === item.href
-                      ? "text-blue-600 bg-blue-50"
+                      ? "text-blue-600 bg-blue-50 font-semibold border-l-4 border-blue-600"
                       : "text-gray-900 hover:text-blue-600 hover:bg-gray-100"
                   }`}
                   onClick={handleLinkClick}
@@ -146,7 +147,7 @@ export function Navigation() {
                   <span className="text-sm text-gray-600">{t("footer.languageLabel")}</span>
                   <button
                     onClick={() => setLanguage("zh")}
-                    className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+                    className={`px-2 py-1 text-sm font-medium rounded transition-colors whitespace-nowrap ${
                       language === "zh" ? "bg-blue-100 text-blue-600" : "text-gray-600 hover:text-blue-600"
                     }`}
                   >
@@ -154,7 +155,7 @@ export function Navigation() {
                   </button>
                   <button
                     onClick={() => setLanguage("en")}
-                    className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+                    className={`px-2 py-1 text-sm font-medium rounded transition-colors whitespace-nowrap ${
                       language === "en" ? "bg-blue-100 text-blue-600" : "text-gray-600 hover:text-blue-600"
                     }`}
                   >

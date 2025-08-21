@@ -44,17 +44,24 @@ export function ContactFormSection() {
     setSubmitStatus("idle")
     setErrorMessage("")
 
+    console.log("[v0] Form submission started", formData)
+
     try {
       const response = await fetch("https://www.kykyai.com/contactus", {
         method: "POST",
+        mode: "cors", // Explicitly set CORS mode
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       })
 
+      console.log("[v0] Response received", response.status, response.statusText)
+
       if (response.ok) {
         setSubmitStatus("success")
+        console.log("[v0] Form submission successful")
         // Reset form on success
         setFormData({
           name: "",
@@ -65,12 +72,21 @@ export function ContactFormSection() {
           message: "",
         })
       } else {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        const errorText = await response.text().catch(() => "Unknown server error")
+        console.log("[v0] Server error response", errorText)
+        throw new Error(`服务器错误 (${response.status}): ${errorText || response.statusText}`)
       }
     } catch (error) {
-      console.error("Form submission error:", error)
+      console.error("[v0] Form submission error:", error)
       setSubmitStatus("error")
-      setErrorMessage(error instanceof Error ? error.message : "An unknown error occurred")
+
+      if (error instanceof TypeError && error.message.includes("Failed to fetch")) {
+        setErrorMessage("网络连接失败，请检查网络连接或稍后重试")
+      } else if (error instanceof Error) {
+        setErrorMessage(error.message)
+      } else {
+        setErrorMessage("未知错误，请稍后重试")
+      }
     } finally {
       setIsLoading(false)
     }
@@ -99,14 +115,17 @@ export function ContactFormSection() {
                   {submitStatus === "success" && (
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                      <span className="text-green-800">消息发送成功！我们会尽快回复您。</span>
+                      <span className="text-green-800 font-medium">发送成功</span>
                     </div>
                   )}
 
                   {submitStatus === "error" && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                       <AlertCircle className="w-5 h-5 text-red-600 mr-2" />
-                      <span className="text-red-800">发送失败，请稍后重试。{errorMessage && ` (${errorMessage})`}</span>
+                      <div className="text-red-800">
+                        <div className="font-medium">发送失败</div>
+                        {errorMessage && <div className="text-sm mt-1">原因：{errorMessage}</div>}
+                      </div>
                     </div>
                   )}
 
