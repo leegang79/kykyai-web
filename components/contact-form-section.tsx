@@ -44,15 +44,13 @@ export function ContactFormSection() {
     setSubmitStatus("idle")
     setErrorMessage("")
 
-    console.log("[v0] Form submission started", formData)
+    console.log("[v0] Form submission started", formData.name)
 
     try {
-      const response = await fetch("https://www.kykyai.com/contactus", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        mode: "cors", // Explicitly set CORS mode
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       })
@@ -72,17 +70,15 @@ export function ContactFormSection() {
           message: "",
         })
       } else {
-        const errorText = await response.text().catch(() => "Unknown server error")
-        console.log("[v0] Server error response", errorText)
-        throw new Error(`服务器错误 (${response.status}): ${errorText || response.statusText}`)
+        const errorData = await response.json().catch(() => ({ error: "Unknown error" }))
+        console.log("[v0] Server error response", errorData)
+        throw new Error(errorData.error || `服务器错误 (${response.status})`)
       }
     } catch (error) {
       console.error("[v0] Form submission error:", error)
       setSubmitStatus("error")
 
-      if (error instanceof TypeError && error.message.includes("Failed to fetch")) {
-        setErrorMessage("网络连接失败，请检查网络连接或稍后重试")
-      } else if (error instanceof Error) {
+      if (error instanceof Error) {
         setErrorMessage(error.message)
       } else {
         setErrorMessage("未知错误，请稍后重试")
