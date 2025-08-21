@@ -15,17 +15,17 @@ export function CTASection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">{t("cta.title")}</h2>
           <p className="text-xl text-blue-50 mb-8">{t("cta.subtitle")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="px-8 py-4 text-lg">
+            {/* <Button size="lg" variant="secondary" className="px-8 py-4 text-lg">
               {t("cta.free_trial")}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </Button> */}
             <Button
               asChild
               size="lg"
               variant="outline"
               className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-white/10 backdrop-blur-sm"
             >
-              <Link href="/contact">{t("cta.contact_sales")}</Link>
+              <Link href="/contact">{t("cta.contact_sales")}<ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
           </div>
         </div>

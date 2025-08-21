@@ -45,29 +45,29 @@ export function TechnologyPlatformsSection() {
                 <CardHeader className="p-12">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-2xl font-bold mb-4 text-slate-800">{t("tech.core_features")}</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-slate-100">{t("tech.core_features")}</h3>
                       <div className="space-y-3">
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.content_features.text_generation")}</span>
+                          <span className="text-slate-200">{t("tech.content_features.text_generation")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.content_features.translation")}</span>
+                          <span className="text-slate-200">{t("tech.content_features.translation")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.content_features.recommendation")}</span>
+                          <span className="text-slate-200">{t("tech.content_features.recommendation")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.content_features.quality_assessment")}</span>
+                          <span className="text-slate-200">{t("tech.content_features.quality_assessment")}</span>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{t("tech.tech_features")}</h3>
+                      <h3 className="text-xl font-semibold text-slate-100 mb-3">{t("tech.tech_features")}</h3>
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="outline" className="flex items-center">
                           <Database className="w-3 h-3 mr-1" />
@@ -84,10 +84,10 @@ export function TechnologyPlatformsSection() {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                    {/* <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
                       {t("tech.learn_more")}
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardHeader>
               </div>
@@ -101,29 +101,29 @@ export function TechnologyPlatformsSection() {
                 <CardHeader className="p-12 order-2 lg:order-1">
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-2xl font-bold mb-4 text-slate-800">{t("tech.core_features")}</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-slate-100">{t("tech.core_features")}</h3>
                       <div className="space-y-3">
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.virtual_features.voice_dialogue")}</span>
+                          <span className="text-slate-200">{t("tech.virtual_features.voice_dialogue")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.virtual_features.expression_generation")}</span>
+                          <span className="text-slate-200">{t("tech.virtual_features.expression_generation")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.virtual_features.emotion_recognition")}</span>
+                          <span className="text-slate-200">{t("tech.virtual_features.emotion_recognition")}</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-500" />
-                          <span className="text-slate-600">{t("tech.virtual_features.multi_scenario")}</span>
+                          <span className="text-slate-200">{t("tech.virtual_features.multi_scenario")}</span>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{t("tech.tech_features")}</h3>
+                      <h3 className="text-xl font-semibold text-slate-100 mb-3">{t("tech.tech_features")}</h3>
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="outline" className="flex items-center">
                           <Mic className="w-3 h-3 mr-1" />
@@ -140,10 +140,10 @@ export function TechnologyPlatformsSection() {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
+                    {/* <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
                       {t("tech.experience_demo")}
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardHeader>
 

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Building2, Cpu, Cloud, Database, Users, ArrowRight, CheckCircle, Globe, TrendingUp, Zap } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import Link from "next/link"
 
 export function PartnersShowcaseSection() {
   const { t } = useLanguage()
@@ -208,8 +209,7 @@ export function PartnersShowcaseSection() {
               size="lg"
               className="bg-gradient-to-r from-lime-500 to-lime-600 hover:from-lime-600 hover:to-lime-700 px-8 py-4 text-lg text-white"
             >
-              {t("partners.cta_button")}
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <Link href="/contact">{t("partners.cta_button")}</Link>
             </Button>
           </div>
         </div>
