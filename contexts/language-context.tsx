@@ -203,6 +203,7 @@ const translations = {
     "partners.hero.title1": "合作伙伴",
     "partners.hero.title2": "共赢未来",
     "partners.hero.description": "与行业领先企业建立深度合作关系，共同推动人工智能技术的创新与应用",
+    "partners.main_title": "我们的合作伙伴",
     "partners.categories_title": "合作伙伴类型",
     "partners.tech_partners_title": "技术合作伙伴",
     "partners.tech_partners_description": "与AI芯片、云计算、大数据等技术厂商深度合作",
@@ -613,6 +614,7 @@ const translations = {
     "partners.hero.title2": "Ecosystem of Innovation",
     "partners.hero.description":
       "We collaborate with leading technology companies, industry partners, and channel distributors to create comprehensive AI solutions and expand market reach across multiple sectors.",
+    "partners.main_title": "Our Partners",
     "partners.categories_title": "Partner Categories",
     "partners.tech_partners_title": "Technology Partners",
     "partners.tech_partners_description":

@@ -11,9 +11,29 @@ export function PartnersShowcaseSection() {
   const { t } = useLanguage()
 
   return (
+
+
+
+    
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+
+          <div id="partner-overview" className="mb-20">
+            <h2 id="partner-main-title" className="text-3xl font-bold text-slate-800 mb-12 text-center">
+              {t("partners.main_title")}
+            </h2>
+            <div id="partner-intro-section" className=" p-8 lg:p-12 mb-16">
+              <div className="flex justify-center shadow-none">
+                <img
+                  id="customers-showcase-image"
+                  src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/customs.jpg"
+                  alt={t("customers.main_title")}
+                  className="max-w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
           {/* Partner Categories */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-slate-800 mb-12 text-center">{t("partners.categories_title")}</h2>
