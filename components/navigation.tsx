@@ -52,8 +52,8 @@ export function Navigation() {
                 id="main-logo"
                 src={
                   language === "en"
-                    ? "https://www.kykyai.com/images/logo-en.png"
-                    : "https://www.kykyai.com/images/logo.png"
+                    ? "https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/logo-en.png"
+                    : "https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/logo.png"
                 }
                 alt="KykyAI Logo"
                 width={170}

@@ -53,7 +53,7 @@ export function ProductsGridSection() {
                     controlsList="nodownload noplaybackrate noremoteplayback"
                     disablePictureInPicture={true}
                     x5-video-player-type="h5"
-                    poster="https://www.kykyai.com/images/twg2.png"
+                    poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/twg2.jpg"
                   >
                     您的浏览器不支持视频播放。
                   </video>
@@ -114,7 +114,7 @@ export function ProductsGridSection() {
                     controlsList="nodownload noplaybackrate noremoteplayback"
                     disablePictureInPicture={true}
                     x5-video-player-type="h5"
-                    poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/jgs_index.png"
+                    poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/jgs_index.jpg"
                   >
                     您的浏览器不支持视频播放。
                   </video>
@@ -197,7 +197,7 @@ export function ProductsGridSection() {
                     controlsList="nodownload noplaybackrate noremoteplayback"
                     disablePictureInPicture={true}
                     x5-video-player-type="h5"
-                    poster="https://www.kykyai.com/images/twg.png"
+                    poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/twg.jpg"
                   >
                     您的浏览器不支持视频播放。
                   </video>
@@ -469,7 +469,7 @@ export function ProductsGridSection() {
                   controlsList="nodownload noplaybackrate noremoteplayback"
                   disablePictureInPicture={true}
                   x5-video-player-type="h5"
-                  poster="https://www.kykyai.com/images/read.png"
+                  poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/read.jpg"
                 >
                   您的浏览器不支持视频播放。
                 </video>
@@ -544,14 +544,14 @@ export function ProductsGridSection() {
               <div id="demo1-container" className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                 <video
                   id="cctv1-video"
-                  src="https://www.kykyai.com/images/20240406.mp4"
+                  src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/20240406.mp4"
                   className="w-full h-full object-cover"
                   preload="auto"
                   controls
                   controlsList="nodownload noplaybackrate noremoteplayback"
                   disablePictureInPicture={true}
                   x5-video-player-type="h5"
-                  poster="https://www.kykyai.com/images/cctv1.png"
+                  poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/cctv1.jpg"
                 >
                   您的浏览器不支持视频播放。
                 </video>
@@ -559,14 +559,14 @@ export function ProductsGridSection() {
               <div id="demo2-container" className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                 <video
                   id="cctv2-video"
-                  src="https://www.kykyai.com/images/20250706.mp4"
+                  src="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/20250706.mp4"
                   className="w-full h-full object-cover"
                   preload="auto"
                   controls
                   controlsList="nodownload noplaybackrate noremoteplayback"
                   disablePictureInPicture={true}
                   x5-video-player-type="h5"
-                  poster="https://www.kykyai.com/images/cctv2.png"
+                  poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/cctv2.jpg"
                 >
                   您的浏览器不支持视频播放。
                 </video>

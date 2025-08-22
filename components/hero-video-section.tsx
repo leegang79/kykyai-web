@@ -13,7 +13,7 @@ export function HeroVideoSection() {
               controlsList="nodownload noplaybackrate noremoteplayback"
               disablePictureInPicture={true}
               x5-video-player-type="h5"
-              poster="https://www.kykyai.com/images/kyintro.png"
+              poster="https://kykyai-web.oss-cn-hangzhou.aliyuncs.com/owe/videopreview/kyintro.jpg"
             >
               您的浏览器不支持视频播放。
             </video>
