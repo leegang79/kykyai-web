@@ -39,7 +39,7 @@ const translations = {
     "company.description":
       "快语科技股份有限公司是一个初创人工智能软件公司，于2021年4月在深圳注册成立，并在上海、杭州和南昌设立了分支机构。公司由前上市公司高管、著名大学教授和前世界500强公司IT总监合伙创立。",
     "company.vision.title": "愿景",
-    "company.vision.description": "通过智能化内容生成，虚拟人实时交互，使工作和学习更轻松愉快！",
+    "company.vision.description": "通过智能化内容生成，数智人实时交互，使工作和学习更轻松愉快！",
     "company.strategy.title": "战略",
     "company.strategy.description":
       "采用全球人工智能领先技术，创建数字内容智能生成平台， 通过数字虚拟人形式进行有效交互，同行业龙头企业合作，对优秀内容进行智能化生成 通过数字虚拟人，服务广泛的行业客户。",
@@ -241,7 +241,7 @@ const translations = {
 
     // Footer
     "footer.company": "深圳快语科技有限公司",
-    "footer.description": "通过智能化内容生成和虚拟人实时交互，为用户提供创新的AI解决方案。",
+    "footer.description": "通过智能化内容生成和数智人实时交互，为用户提供创新的AI解决方案。",
     "footer.links": "公司",
     "footer.contact": "联系方式",
     "footer.copyright": "保留所有权利",
@@ -383,7 +383,7 @@ const translations = {
     // Technology Platform
     "tech.hero.badge": "技术平台",
     "tech.hero.title1": "智能内容生成",
-    "tech.hero.title2": "虚拟人实时交互",
+    "tech.hero.title2": "数智人实时交互",
     "tech.hero.description":
       "基于先进的人工智能技术，我们构建了两大核心技术平台：智能内容生成平台和虚拟人实时交互平台，为各行业提供强大的AI技术支撑。",
 
@@ -403,7 +403,7 @@ const translations = {
     "tech.learn_more": "了解更多",
 
     // Virtual Human Platform
-    "tech.virtual_human_title": "虚拟人实时交互平台",
+    "tech.virtual_human_title": "数智人实时交互平台",
     "tech.virtual_human_description": "结合计算机视觉、语音识别和自然语言处理技术，打造栩栩如生的虚拟人交互体验。",
     "tech.virtual_features.voice_dialogue": "语音对话交互",
     "tech.virtual_features.expression_generation": "表情动作生成",
