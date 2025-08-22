@@ -27,7 +27,7 @@ const translations = {
 
     // Hero Section
     "hero.title": "快语科技",
-    "hero.subtitle": "智能化内容处理，虚拟人实时交互",
+    "hero.subtitle": "智能内容生成，数智人实时交互",
     "hero.description":
       "我们是一家高速成长的人工智能科技公司，总部位于深圳，在南昌设有研发中心，在上海、杭州设有办事处。快语科技专注于应用人工智能赋能在文旅产业的应用和研发，业务覆盖众多国内5A级景区、一级博物馆。团队致力于通过人工智能技术创新推动文旅产业升级。",
     "hero.cta.primary": "了解更多",

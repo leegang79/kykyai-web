@@ -10,7 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/lig-demo/web',
+  // basePath: '/lig-demo/web',
   trailingSlash: true,
 }
 

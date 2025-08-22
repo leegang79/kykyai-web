@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "KykyAI - Intelligent Content & Virtual Interaction",
+  title: "快语科技 - 智能内容生成 & 数智人实时交互",
   description:
     "Experience the future of AI-driven content creation with seamless virtual interactions. Transform your ideas into reality with our intelligent platform.",
   generator: "v0.app",
